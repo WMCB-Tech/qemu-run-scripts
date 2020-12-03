@@ -13,7 +13,7 @@ stty intr ^N
 qemu-system-x86_64 \
  -cpu max -smp cpus=4,cores=4,threads=1,sockets=1 \
  -accel tcg,tb-size=512 -m 1024 \
- -drive file=alpine.qcow2,if=virtio,cache=writeback \
+ -drive file=alpine.qcow2,id=virtio-disk0 -device virtio-blk-pci,drive=virtio=disk0 \
  -boot menu=on \
  -device virtio-balloon \
  -object rng-random,filename=/dev/urandom,id=rng0 \
