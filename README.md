@@ -1,7 +1,7 @@
 # qemu-run-scripts
 Setting up VirtIO Devices is pain in the butt
 
-Copy-paste version
+Do not copy-paste this unless you know what you're doing and the guest OS supports this
 
 Without KVM
 ```
