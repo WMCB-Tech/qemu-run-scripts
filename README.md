@@ -18,11 +18,10 @@ qemu-system-x86_64 \
  -device virtio-balloon \
  -object rng-random,filename=/dev/urandom,id=rng0 \
  -device virtio-rng-pci,rng=rng0,id=virtio-rng-pci0 \
- -fsdev local,security_model=none,id=fsdev0,path=/ \
+ -fsdev local,security_model=none,id=fsdev0,path=/sdcard \
  -device virtio-9p-pci,fsdev=fsdev0,mount_tag=hostfs \
  -netdev user,id=eth0 \
  -device virtio-net-pci,netdev=eth0,id=virtio-net-pci0 \
- -net nic -net user,smb=/ \
  -device virtio-tablet-pci \
  -global qxl-vga.ram_size_mb=128 -vga qxl \
  -nographic -parallel none \
