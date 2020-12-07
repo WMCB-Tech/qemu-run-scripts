@@ -15,7 +15,6 @@ qemu-system-x86_64 \
  -device virtio-9p-pci,fsdev=fsdev0,mount_tag=hostfs \
  -netdev user,id=eth0 \
  -device virtio-net-pci,netdev=eth0,id=virtio-net-pci0 \
- -net nic -net user,smb=/ \
  -device virtio-tablet-pci \
  -global qxl-vga.ram_size_mb=128 -vga qxl \
  -nographic -parallel none \
