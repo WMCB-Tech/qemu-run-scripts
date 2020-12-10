@@ -1,6 +1,8 @@
 # qemu-run-scripts
 Setting up VirtIO Devices is pain in the butt
 
+Using all possible virtio devices for enhanced performance
+
 Do not copy-paste this unless you know what you're doing and the guest OS supports this
 
 Without KVM (For Termux/Without QXL)
