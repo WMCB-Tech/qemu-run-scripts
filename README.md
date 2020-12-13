@@ -16,7 +16,7 @@ stty intr ^]
 ### QEMU Launch Parameters
 qemu-system-x86_64 \
  -cpu max -smp cpus=4,cores=4,threads=1,sockets=1 \
- -accel tcg -m 1024,slots=4,maxmem=4G \
+ -accel tcg,tb-size=512 -m 1024,slots=4,maxmem=4G \
  -boot menu=on \
  -drive file=alpine.qcow2,if=none,id=virtio-disk0 \
  -device virtio-blk-pci,scsi=off,drive=virtio-disk0,bootindex=2 \
